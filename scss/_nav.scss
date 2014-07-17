@@ -1,0 +1,103 @@
+/*! responsive-nav.js 1.0.32 by @viljamis */
+.nav-collapse{
+  color: black;
+  padding: 1%;
+  font-family: fira_sans_otbold;
+background: white;
+ a:link{
+   text-decoration: none;
+ }
+}
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+
+  border: 3px solid rgba(4, 0, 51, 1);
+  background: white;
+  color: rgb(4, 0, 51);
+  text-decoration: none;
+  font-family: fira_sans_otbold;
+  padding: 5px 10px 5px 10px;
+  margin-left: 5px;
+  
+}
+
+@include breakpoint(900px) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-collapse{
+   
+    text-align: center;
+    font-size: 1.3rem;
+    background: white;
+  }
+  .nav-collapse li {
+  width: 100px;
+  display: inline;
+background: white;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+  font-family: fira_sans_otbold;
+  padding: 5px 5px 5px 5px;
+
+ 
+border: 3px solid rgba(4, 0, 51, 1);
+
+
+
+}
+ .nav-collapse li a{
+   color: black;
+   text-decoration: none;
+
+ }
+}

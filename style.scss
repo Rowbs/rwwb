@@ -1,0 +1,339 @@
+/*!
+Theme Name: Rowblr
+Theme URI: http://localhost/rowblr.com
+Description: Andrew Rowberry portfolio site
+Author: Andrew Rowberry
+Author URI: http://rowblr.com
+Version: 1.0
+Tags: javascript, css3, responsive, two-column, custom-post-types, custom-fields, portfolio, html5, php, mysql, nodeJS, mongoDB
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+andrews main stylesheet
+*/
+
+
+@import "singularitygs";
+@import "breakpoint";
+
+@import "compass";
+@import "scss/nav";
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/globals";
+
+
+$breakpoint-to-ems: true;
+$grids: 1;
+$gutters: 1/3;
+$grids: add-grid(10 4 at 900px);
+
+$firabold: fira_sans_otbold;
+$fira: fira_sans_otregular;
+$dosisbold: dosisbold;
+$driod: droid_sansregular;
+$sansbold: open_sansbold;
+$heading1: colab-med;
+$heading2: colab-reg;
+
+
+@font-face {
+    font-family: 'fira_sans_otbold';
+    src: url('fonts/firasansot-bold-webfont.eot');
+    src: url('fonts/firasansot-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/firasansot-bold-webfont.woff') format('woff'),
+         url('fonts/firasansot-bold-webfont.ttf') format('truetype'),
+         url('fonts/firasansot-bold-webfont.svg#fira_sans_otbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fira_sans_otregular';
+    src: url('fonts/firasansot-regular-webfont.eot');
+    src: url('fonts/firasansot-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/firasansot-regular-webfont.woff') format('woff'),
+         url('fonts/firasansot-regular-webfont.ttf') format('truetype'),
+         url('fonts/firasansot-regular-webfont.svg#fira_sans_otregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'dosisbold';
+    src: url('fonts/dosis-bold-webfont.eot');
+    src: url('fonts/dosis-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dosis-bold-webfont.woff') format('woff'),
+         url('fonts/dosis-bold-webfont.ttf') format('truetype'),
+         url('fonts/dosis-bold-webfont.svg#dosisbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('fonts/droidsans-webfont.eot');
+    src: url('fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/droidsans-webfont.woff') format('woff'),
+         url('fonts/droidsans-webfont.ttf') format('truetype'),
+         url('fonts/droidsans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('fonts/opensans-bold-webfont.eot');
+    src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-bold-webfont.woff') format('woff'),
+         url('fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'colab-reg';
+    src: url('fonts/colabreg-webfont.eot');
+    src: url('fonts/colabreg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/colabreg-webfont.woff') format('woff'),
+         url('fonts/colabreg-webfont.ttf') format('truetype'),
+         url('fonts/colabreg-webfont.svg#colab-reg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'colab-med';
+    src: url('fonts/colabmed-webfont.eot');
+    src: url('fonts/colabmed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/colabmed-webfont.woff') format('woff'),
+         url('fonts/colabmed-webfont.ttf') format('truetype'),
+         url('fonts/colabmed-webfont.svg#colab-med') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+	font-size: 100%;
+}
+
+body{
+	margin: 0;
+	background: white;
+	overflow-x: hidden;
+}
+
+a:link{
+	color: black;
+}
+a:visited{
+	color: black;
+}
+	
+h2{
+	font-family: $heading1;
+	a:link{
+	text-decoration: none;
+		}
+}
+.top-header{
+	background: white;
+	margin-bottom: 20px;
+
+	@include breakpoint(900px){
+		position: relative;
+		left: 40%;
+		height: 160px;
+	}
+	
+}
+
+.main{
+	font-size: 1.3em;
+	line-height: 1.5em;
+	background: white;
+	text-align: left;
+@include breakpoint(900px){
+margin: 25px 25px 25px 25px;
+}
+		.sidebar{
+		margin-left: 25px;
+		background: white;
+		color: rbg(4, 0, 51);
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+
+		@include breakpoint(900px){
+			
+			@include grid-span(4, 9);
+
+		}
+				}
+	
+	
+	article.content{
+			p{
+			font-family: $heading2;
+			line-height: 1.3em;
+			padding: 5px 5px 5px 5px;
+
+		}
+		background: white;
+			-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+			@include breakpoint(900px){
+			@include grid-span(8, 1);
+		border-right: 3px solid rgba(4, 0, 51, 1);
+
+		}
+	}
+	aside{
+
+	
+	@include breakpoint(900px){
+		@include grid-span(4, 9);
+	}
+}
+
+}
+
+
+.content2::after{
+  visibility: hidden;
+  content: "";
+  clear: both;
+  height: 0;
+  display: block;
+}
+
+.main::after{
+  visibility: hidden;
+  content: "";
+  clear: both;
+  height: 0;
+  display: block;
+}
+
+
+.main-btn{
+	
+border: 3px solid rgba(4, 0, 51, 1);
+  background: white;
+  color: rgb(4, 0, 51);
+  text-decoration: none;
+  font-family: fira_sans_otbold;
+  padding: 5px 10px 5px 10px;
+	font-size: 1rem;
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+
+@include breakpoint(900px){
+	
+	font-size: 1.3rem;
+
+}
+
+
+            a:link{
+	color: black;
+	text-decoration: none;
+}
+a:visited{
+	color: black;
+	text-decoration: none;
+}
+}
+
+
+.content-wrapper{
+	background: white;
+	color: black;
+	padding: 10px 10px 10px 10px;
+	font-family: $fira;
+	margin-bottom: 15px;
+	font-size: 1rem;
+	line-height: 1.3em;
+	@include breakpoint(900px){
+		font-size: 1.3rem;
+		 margin: 25px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		border-radius: 5px;
+	}
+}
+.post-info{
+	color: rgb(4,0,51);
+	background: white;
+	border-top: 3px solid rgba(4, 0, 51, 1);
+	-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		border-radius: 5px;
+
+}
+.details{
+	font-size: 1rem;
+	margin-top: 15px;
+	margin-left: 25px;
+	color: rgb(4,0,51);
+	font-family: $fira;
+}
+.notes{
+	font-size: 1rem;
+	color: rgb(4,0,51);
+	font-family: $fira;
+	border-bottom: 3px solid rgb(4, 0, 51);
+}
+.blog-title{
+	margin-left: 15px;
+	padding: 25px;
+	@include breakpoint(900px){
+		font-size: 2rem;
+	}
+}
+.blog-title a{
+	font-family: $sansbold;
+	color: rgb(4,0,51);
+	text-align: center;
+	text-decoration: none;
+}
+
+a.socialbox-network.socialbox-network-twitter{
+	background: rgba(4, 0, 51, 1);
+}
+a.socialbox-network.socialbox-network-instagram{
+	background: rgba(4, 0, 51, 1);
+}
+a.socialbox-network.socialbox-network-facebook{
+	background: rgba(4, 0, 51, 1);
+}
+footer{
+border-top: 3px solid rgba(4, 0, 51, 1);
+max-height: 250px;
+
+}
